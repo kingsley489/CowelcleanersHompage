@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cowel Cleaners | Professional Cleaning Services in Canada</title>
+<meta name="description" content="Cowel Cleaners is Canada's leading cleaning service provider, offering expert residential, commercial, and healthcare cleaning. We ensure top-quality, eco-friendly solutions nationwide. Book a service today or apply to join our team! Contact us at infodesk@cowelcleaners.com.">
+<meta name="author" content="Cowel Cleaners">
+<!-- Website designed by Kingsley Magnus Emori | Developed for Cowel Cleaners -->
+<meta name="copyright" content="© 2025 Cowel Cleaners. All rights reserved. Cowel Cleaners is a registered trademark. Unauthorized use, duplication, or distribution of any content, images, or materials from this website is strictly prohibited without prior written permission.">
+<meta name="robots" content="index, follow">
+<!-- Standard favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="Fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="Fav/android-chrome-192x192.png">
+
+<!-- Apple Touch Icon -->
+<!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> -->
+
+<!-- Large PWA icon -->
+<link rel="icon" type="image/png" sizes="512x512" href="Fav/android-chrome-512x512.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#4F46E5',
+secondary: '#22C55E'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.mobile-menu { transform: translateX(-100%); transition: transform 0.3s ease-in-out; }
+.mobile-menu.active { transform: translateX(0); }
+@media (min-width: 1024px) {
+.mobile-menu { transform: translateX(0); }
+}
+html{
+    scroll-behavior: smooth;
+}
+.colorgray{
+    background-color: #f3f4f6;
+}
+</style>
+
+
+</head>
+<body class="bg-white">
+<header class="fixed w-full bg-white shadow-sm z-50">
+<nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Cowel Cleaners</a>
+<button class="lg:hidden w-10 h-10 flex items-center justify-center cursor-pointer" id="menuToggle">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+<div class="hidden lg:flex items-center space-x-8">
+<a href="#HOME" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+<a href="#ABOUT" class="text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#SERVICES" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+<a href="#WHYUS" class="text-gray-700 hover:text-primary transition-colors">Why Us</a>
+<a href="#WHATWEOFFER" class="text-gray-700 hover:text-primary transition-colors">What We Offer</a>
+<a href="#WEAREHIRING" class="text-gray-700 hover:text-primary transition-colors">We Are Hiring!</a>
+<!-- <a href="tel:+16476730466" class="text-gray-700 hover:text-primary transition-colors">+1 (647) 673-0466</a> -->
+<a href="#CONTACT"><button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Book Now</button></a>
+</div>
+</nav>
+<div class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-lg lg:hidden">
+<div class="p-4">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary block mb-8">Cowel Cleaners</a>
+<!-- <a href="#" class="text-2xl font-['Pacifico'] text-primary block mb-8"><img src="logo.png" alt="cowel cleaners logo"></a> -->
+<div class="flex flex-col space-y-4">
+<a href="#HOME" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+<a href="#ABOUT" class="text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#SERVICES" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+<a href="#WHYUS" class="text-gray-700 hover:text-primary transition-colors">Why Us</a>
+<a href="#WHATWEOFFER" class="text-gray-700 hover:text-primary transition-colors">What We Offer</a>
+<a href="#WEAREHIRING" class="text-gray-700 hover:text-primary transition-colors">We Are Hiring!</a>
+<!-- <a href="#CONTACT" class="text-gray-700 hover:text-primary transition-colors">Contact</a> -->
+<!-- <a href="tel:+16476730466" class="text-gray-700 hover:text-primary transition-colors">+1 (647) 673-0466</a> -->
+<a href="#CONTACT"><button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Book Now</button></a>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-16" id="HOME">
+<section class="relative h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img src="house cleaning.jpg" class="w-full h-full object-cover" alt="Hero Image">
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="container mx-auto px-4 relative">
+<div class="max-w-2xl text-white">
+<h1 class="text-5xl font-bold mb-6">Professional Cleaning Services for Your Home</h1>
+<p class="text-xl mb-8">Experience the difference with our expert cleaning team. We bring sparkle and shine to every corner of your space.</p>
+<a href="#CONTACT"><button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors text-lg whitespace-nowrap">Book Now</button></a>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white" id="ABOUT">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+<div>
+<h2 class="text-4xl font-bold mb-6">About Cowel Cleaners Canada</h2>
+<p class="text-gray-600 mb-4">As a leading provider in Canada's cleaning industry, Cowel Cleaners delivers exceptional service standards and innovative solutions to professional cleaning. With our headquarters in Ontario and operations spanning across all major Canadian cities, we maintain a strong reputation for excellence from coast to coast.</p>
+<p class="text-gray-600 mb-4">Our nationwide network of certified cleaning professionals serves residential and commercial clients in Vancouver, Calgary, Edmonton, Toronto, Ottawa, Montreal, and Halifax, ensuring consistent, high-quality cleaning services across Canada.</p>
+<div class="grid grid-cols-2 gap-6 mt-8">
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-2">100%</div>
+<div class="text-gray-600">Satisfaction Rate</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-2">5K+</div>
+<div class="text-gray-600">Happy Customers</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img src="c lady.png" alt="Cowel Cleaners Team" class="rounded-lg shadow-lg">
+<div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg">
+<div class="text-2xl font-bold mb-1">24/7</div>
+<div class="text-sm">Service Available</div>
+</div>
+</div>
+</div>
+<h2 class="text-4xl font-bold text-center mb-16" id="SERVICES">Our Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <img src="ASSETS/S PICS/Healthcare.png" alt="Healthcare cleaning"
+            class="w-full rounded-lg mb-6 shadow-md">
+        <h3 class="text-2xl font-bold mb-4">Healthcare</h3>
+        <p class="text-gray-600">We understand the importance of maintaining a clean and sterile environment in medical offices. Our team has the necessary training and equipment to ensure that your medical office is clean and safe.        </p>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <img src="ASSETS/S PICS/Office.png" alt="Office & Commercial cleaning"
+            class="w-full rounded-lg mb-6 shadow-md">
+        <h3 class="text-2xl font-bold mb-4">Office & Commercial</h3>
+        <p class="text-gray-600">We offer daily, weekly, and monthly cleaning services for offices of all sizes. We are committed to maintaining a clean and healthy environment for your employees.</p>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <img src="ASSETS/S PICS/residential.png" alt="Residential Cleaning" class="w-full rounded-lg mb-6 shadow-md">
+        <h3 class="text-2xl font-bold mb-4">Residential</h3>
+        <p class="text-gray-600">Our daily home cleaning services keeps your home immaculate, with tasks like tidying, dusting, vacuuming, and kitchen and bathroom maintenance. We work around your schedule to ensure your space is always inviting.</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <img src="ASSETS/S PICS/Post-construction.png" alt="Post-Construction"
+            class="w-full rounded-lg mb-6 shadow-md">
+        <h3 class="text-2xl font-bold mb-4">Post-Construction</h3>
+        <p class="text-gray-600">Our team will clean up your construction site and remove all debris, dust, and dirt. We will leave your site clean and ready for the next phase of construction.</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <img src="ASSETS/S PICS/Move in.png" alt="Move in/ Move out"
+            class="w-full rounded-lg mb-6 shadow-md">
+        <h3 class="text-2xl font-bold mb-4">Move in/ Move out</h3>
+        <p class="text-gray-600">We provide move in / move out cleaning services for both residential and commercial properties. Our team will leave your property clean and ready for the next tenant.</p>
+    </div>
+</div>
+</div>
+</section>
+<section class="py-20 relative overflow-hidden" id="WHYUS">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-10">Why Choose Us</h2>
+        <div class="relative w-full max-w-4xl mx-auto">
+            <div class="overflow-hidden relative w-full h-64">
+                <div class="flex w-full transition-transform duration-500 ease-in-out" id="slider">
+                    <div class="min-w-full flex flex-col items-center justify-center bg-cover bg-center p-8" style="background-image: url('ASSETS/Why/trusted.jpg');">
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                            <i class="ri-shield-check-line text-primary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Trusted & Reliable</h3>
+                        <p class="text-black">Committed to delivering consistent, high-quality cleaning services.</p>
+                    </div>
+                    <div class="min-w-full flex flex-col items-center justify-center bg-cover bg-center p-8" style="background-image: url('ASSETS/Why/team.jpg');">
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                            <i class="ri-team-line text-primary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Expert Team</h3>
+                        <p class="text-black">Professionally trained and background-checked cleaning specialists.</p>
+                    </div>
+                    <div class="min-w-full flex flex-col items-center justify-center bg-cover bg-center p-8" style="background-image: url('ASSETS/Why/eco.jpg');">
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                            <i class="ri-leaf-line text-primary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Eco-Friendly</h3>
+                        <p class="text-black">Using environmentally safe cleaning products and methods.</p>
+                    </div>
+                    <div class="min-w-full flex flex-col items-center justify-center bg-cover bg-center p-8" style="background-image: url('ASSETS/Why/support.jpg');">
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                            <i class="ri-customer-service-line text-primary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                        <p class="text-black">Always available to address your cleaning needs and concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        function slide() {
+            index = (index + 1) % 4;
+            document.getElementById('slider').style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(slide, 5000);
+    </script>
+</section>
+
+
+<section class="py-16 bg-gray-100" id="WHATWEOFFER">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-black-800 mb-12">What Do We Offer!</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="ASSETS/WhatweOffer/Office.png" alt="Office Cleaning" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Office & Commercial</h3>
+                    <p class="text-gray-600 mt-2">We offer daily, weekly, and monthly cleaning services for offices of all sizes, maintaining a clean and healthy work environment.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="ASSETS/WhatweOffer/residential.png" alt="Residential Cleaning" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Residential</h3>
+                    <p class="text-gray-600 mt-2">Daily home cleaning services, ensuring your home stays immaculate with tidying, dusting, vacuuming, and kitchen/bathroom maintenance.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="ASSETS/WhatweOffer/healthcare.png" alt="Healthcare Cleaning" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Healthcare</h3>
+                    <p class="text-gray-600 mt-2">We ensure medical offices remain clean and sterile with trained staff and proper equipment.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="ASSETS/WhatweOffer/Post construction.png" alt="Post Construction Cleaning" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Post Construction</h3>
+                    <p class="text-gray-600 mt-2">We clean up construction sites, removing debris, dust, and dirt, leaving them ready for the next phase.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="ASSETS/WhatweOffer/Move in.png" alt="Move-in / Move-out Cleaning" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Move-in / Move-out</h3>
+                    <p class="text-gray-600 mt-2">Offering move-in/move-out cleaning services for both residential and commercial properties, ensuring a fresh start.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="ASSETS/WhatweOffer/pricing.png" alt="Competitive Pricing" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Competitive Pricing</h3>
+                    <p class="text-gray-600 mt-2">We provide affordable pricing without compromising quality, delivering top-notch cleaning services.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md md:col-span-2 lg:col-span-3">
+                <img src="ASSETS/WhatweOffer/eco friendly.png" alt="Eco-Friendly Cleaning" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Eco-Friendly Products</h3>
+                    <p class="text-gray-600 mt-2">We use eco-friendly products for a sustainable cleaning approach, ensuring a healthier environment.</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="text-center mt-8">
+            <button class="bg-blue-600 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-blue-700 transition">View All</button>
+        </div> -->
+    </div>
+</section>
+
+<section class="py-20 bg-white" id="WEAREHIRING">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <!-- Image -->
+        <div class="md:w-1/2 mb-6 md:mb-0 p-4">
+            <img src="ASSETS/Apply.png" alt="We are hiring" class="w-full rounded-lg shadow-lg">
+        </div>
+        
+        <!-- Text Content -->
+        <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">We Are Hiring!</h2>
+            <p class="text-lg text-gray-600 mb-4">
+                Join our team and be part of something great!  
+                If you’re interested in one of our open positions, send your application and resume to:
+            </p>
+            <p class="text-lg font-semibold text-blue-600">📩 infodesk@cowelcleaners.com</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="py-20 bg-gray-50" style="background-color: #f3f4f6;">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16" id="CONTACT">Contact Us</h2>
+        <div class="max-w-3xl mx-auto">
+            <form action="https://api.web3forms.com/submit" method="POST" class="bg-white p-8 rounded-lg shadow-sm">
+                <input type="hidden" name="access_key" value="5fee9ee9-b063-49f0-8e3d-fb9436e51ece">
+                <input type="hidden" name="redirect" value="https://kingsley489.github.io/CowelsThankyoupage/">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="name">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="telephone">Telephone</label>
+                        <input type="tel" id="telephone" name="telephone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 mb-2" for="service">Service Type</label>
+                    <select id="service" name="service" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        <option value="">Select a service</option>
+                        <option value="house cleaning">House Cleaning</option>
+                        <option value="residential">Residential Cleaning</option>
+                        <option value="commercial">Commercial Cleaning</option>
+                        <option value="deep">Deep Cleaning</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 mb-2" for="message">Message</label>
+                    <textarea id="message" rows="4" name="message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 block">Cowel Cleaners</a>
+<p class="text-gray-400">Canada's innovative cleaning service provider, delivering exceptional cleaning solutions nationwide. Proudly serving Canadians with fresh perspectives and superior standards.</p>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#HOME" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#ABOUT" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+<li><a href="#SERVICES" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#WHYUS" class="text-gray-400 hover:text-white transition-colors">Why Us</a></li>
+<li><a href="#WHYCHOOSEUS" class="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
+<li><a href="#WEAREHIRING" class="text-gray-400 hover:text-white transition-colors">We Are Hiring!</a></li>
+<li><a href="#CONTACT" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#SERVICES" class="text-gray-400 hover:text-white transition-colors">Residential Cleaning</a></li>
+<li><a href="#SERVICES" class="text-gray-400 hover:text-white transition-colors">Commercial Cleaning</a></li>
+<li><a href="#SERVICES" class="text-gray-400 hover:text-white transition-colors">Deep Cleaning</a></li>
+<li><a href="#SERVICES" class="text-gray-400 hover:text-white transition-colors">Move In/Out Cleaning</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Contact Info</h4>
+<ul class="space-y-2">
+<li class="flex items-center"><i class="ri-map-pin-line mr-2"></i> Unit 1, 3100 Thomas Street Mississauga Ontario. Postcode- L5M 0T2</li>
+<li class="flex items-center"><i class="ri-phone-line mr-2"></i> +1 (647) 673-0466</li>
+<li class="flex items-center"><i class="ri-mail-line mr-2"></i> cowelcleanerscanada@gmail.com</li>
+<li class="flex items-center"><i class="ri-mail-line mr-2"></i> infodesk@cowelcleaners.com</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">&copy; 2025 Cowel Cleaners. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.toggle('active');
+    });
+
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuToggle = document.getElementById('menuToggle');
+        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+            mobileMenu.classList.remove('active');
+        }
+    });
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+        // e.preventDefault(); // Leave this commented out for Web3Forms
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        console.log('Form submitted:', data);
+        const successMessage = document.createElement('div');
+        successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
+        successMessage.textContent = 'Your message has been sent successfully. We will contact you soon.';
+        document.body.appendChild(successMessage);
+        setTimeout(() => {
+            successMessage.remove();
+            form.reset();
+        }, 3000);
+    });
+</script>
+</html>
