@@ -58,9 +58,9 @@ DEFAULT: '8px',
 @media (min-width: 1024px) {
 .mobile-menu { transform: translateX(0); }
 }
-html{
+/* html{
     scroll-behavior: smooth;
-}
+} */
 .colorgray{
     background-color: #f3f4f6;
 }
@@ -399,10 +399,18 @@ html{
         document.querySelector('.mobile-menu').classList.toggle('active');
     });
 
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a'); // Get all the links inside the mobile menu
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active'); // Remove the 'active' class to slide the menu out
+        });
+    });
+
     document.addEventListener('click', function(event) {
-        const mobileMenu = document.querySelector('.mobile-menu');
         const menuToggle = document.getElementById('menuToggle');
-        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target) && mobileMenu.classList.contains('active')) {
             mobileMenu.classList.remove('active');
         }
     });
