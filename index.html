@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="TPd8NUZxZyugTkEYcN0g9j0ZtYA7aoUxye0rNyXDG3s" />
 <title>Cowel Cleaners | Professional Cleaning Services in Canada</title>
 <meta name="description" content="Cowel Cleaners is Canada's leading cleaning service provider, offering expert residential, commercial, and healthcare cleaning. We ensure top-quality, eco-friendly solutions nationwide. Book a service today or apply to join our team! Contact us at infodesk@cowelcleaners.com.">
 <meta name="author" content="Cowel Cleaners">
@@ -83,6 +82,7 @@ DEFAULT: '8px',
 <a href="#WHYUS" class="text-gray-700 hover:text-primary transition-colors">Why Us</a>
 <a href="#WHATWEOFFER" class="text-gray-700 hover:text-primary transition-colors">What We Offer</a>
 <a href="#WEAREHIRING" class="text-gray-700 hover:text-primary transition-colors">We Are Hiring!</a>
+<a href="review-app/review.html" class="text-gray-700 hover:text-primary transition-colors">Reviews</a>
 <!-- <a href="tel:+16476730466" class="text-gray-700 hover:text-primary transition-colors">+1 (647) 673-0466</a> -->
 <a href="#CONTACT"><button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Book Now</button></a>
 </div>
@@ -100,6 +100,7 @@ DEFAULT: '8px',
 <a href="#WEAREHIRING" class="text-gray-700 hover:text-primary transition-colors">We Are Hiring!</a>
 <!-- <a href="#CONTACT" class="text-gray-700 hover:text-primary transition-colors">Contact</a> -->
 <!-- <a href="tel:+16476730466" class="text-gray-700 hover:text-primary transition-colors">+1 (647) 673-0466</a> -->
+<a href="https://testimonial.to/cowel-cleaners-canada" class="text-gray-700 hover:text-primary transition-colors">Reviews</a>
 <a href="#CONTACT"><button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Book Now</button></a>
 </div>
 </div>
@@ -309,7 +310,64 @@ DEFAULT: '8px',
     </div>
 </section>
 
-
+<section id="testimonial-section" class="py-16 bg-gray-100 hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold" id="testimonial-heading">Testimonials</h2>
+        <p class="text-gray-600">See what our customers are saying about us.</p>
+      </div>
+  
+      <!-- Reviews wrapper -->
+      <div id="reviews-scroll" class="flex space-x-6 overflow-x-auto scroll-smooth px-2 py-4">
+        <!-- Review cards go here -->
+      </div>
+  
+      <div class="text-center mt-8">
+        <a href="review-app\review.html" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition">Add a Review</a>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    async function loadEmbeddedReviews() {
+      try {
+        const res = await fetch('http://localhost:4000/api/reviews');
+        const reviews = await res.json();
+        const section = document.getElementById('testimonial-section');
+        const scrollContainer = document.getElementById('reviews-scroll');
+  
+        if (reviews.length === 0) {
+          section.classList.add('hidden');
+          return;
+        }
+  
+        section.classList.remove('hidden'); // Show section if reviews exist
+  
+        reviews.forEach(r => {
+          const card = document.createElement('div');
+          card.className = 'min-w-[300px] max-w-[300px] bg-white rounded-lg shadow p-6 flex-shrink-0';
+          card.innerHTML = `
+            <p class="text-gray-800 mb-4 text-sm leading-relaxed">${r.text}</p>
+            <div class="flex items-center gap-3 mt-4">
+              <div class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center text-white font-bold">
+                ${r.name.charAt(0).toUpperCase()}
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm">${r.name}</h4>
+                <div class="text-yellow-400 text-sm">${'★'.repeat(r.rating)}</div>
+              </div>
+            </div>
+          `;
+          scrollContainer.appendChild(card);
+        });
+      } catch (err) {
+        console.error('Error loading reviews:', err);
+      }
+    }
+  
+    document.addEventListener('DOMContentLoaded', loadEmbeddedReviews);
+  </script>
+  
 
 <section class="py-20 bg-gray-50" style="background-color: #f3f4f6;">
     <div class="container mx-auto px-4">
