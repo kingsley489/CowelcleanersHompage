@@ -24,6 +24,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -310,63 +314,70 @@ DEFAULT: '8px',
     </div>
 </section>
 
+<!-- Replace your old testimonial-section and script with this: -->
 <section id="testimonial-section" class="py-16 bg-gray-100 hidden">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold" id="testimonial-heading">Testimonials</h2>
-        <p class="text-gray-600">See what our customers are saying about us.</p>
-      </div>
-  
-      <!-- Reviews wrapper -->
-      <div id="reviews-scroll" class="flex space-x-6 overflow-x-auto scroll-smooth px-2 py-4">
-        <!-- Review cards go here -->
-      </div>
-  
-      <div class="text-center mt-8">
-        <a href="https://early-wind-headphones.glitch.me" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition">Add a Review</a>
-      </div>
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold">Testimonials</h2>
+      <p class="text-gray-600">See what our customers are saying about us.</p>
     </div>
-  </section>
-  
-  <script>
-    async function loadEmbeddedReviews() {
-      try {
-        const res = await fetch('https://early-wind-headphones.glitch.me/api/reviews');
-        const reviews = await res.json();
-        const section = document.getElementById('testimonial-section');
-        const scrollContainer = document.getElementById('reviews-scroll');
-  
-        if (reviews.length === 0) {
-          section.classList.add('hidden');
-          return;
-        }
-  
-        section.classList.remove('hidden'); // Show section if reviews exist
-  
-        reviews.forEach(r => {
-          const card = document.createElement('div');
-          card.className = 'min-w-[300px] max-w-[300px] bg-white rounded-lg shadow p-6 flex-shrink-0';
-          card.innerHTML = `
-            <p class="text-gray-800 mb-4 text-sm leading-relaxed">${r.text}</p>
-            <div class="flex items-center gap-3 mt-4">
-              <div class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center text-white font-bold">
-                ${r.name.charAt(0).toUpperCase()}
-              </div>
-              <div>
-                <h4 class="font-semibold text-sm">${r.name}</h4>
-                <div class="text-yellow-400 text-sm">${'★'.repeat(r.rating)}</div>
-              </div>
-            </div>
-          `;
-          scrollContainer.appendChild(card);
-        });
-      } catch (err) {
-        console.error('Error loading reviews:', err);
-      }
+
+    <!-- Reviews wrapper -->
+    <div id="reviews-scroll" class="flex space-x-6 overflow-x-auto scroll-smooth px-2 py-4">
+      <!-- Review cards will be injected here -->
+    </div>
+
+    <!-- Add Review button -->
+    <div class="text-center mt-8">
+      <a href="https://kingsley489.github.io/cowel-reviews/index.html"
+         class="inline-block bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">
+        Add a Review
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Initialize Firebase (reuse your existing firebaseConfig)
+  firebase.initializeApp({
+    apiKey: "AIzaSyCnUft1W23MA4Wpx6mzo6IGIBl65Nx4SP0",
+    authDomain: "cowel-reviews.firebaseapp.com",
+    projectId: "cowel-reviews",
+    storageBucket: "cowel-reviews.firebasestorage.app",
+    messagingSenderId: "1048377700597",
+    appId: "1:1048377700597:web:9ca74c4698f88e957e55bc"
+  });
+  const db = firebase.firestore();
+
+  const section = document.getElementById('testimonial-section');
+  const scroll = document.getElementById('reviews-scroll');
+
+  db.collection('reviews').orderBy('date', 'desc').onSnapshot(snapshot => {
+    // Hide if no reviews
+    if (snapshot.empty) {
+      section.classList.add('hidden');
+      return;
     }
-  
-    document.addEventListener('DOMContentLoaded', loadEmbeddedReviews);
-  </script>
+    section.classList.remove('hidden');
+    scroll.innerHTML = '';
+
+    snapshot.forEach(doc => {
+      const r = doc.data();
+      const card = document.createElement('div');
+      card.className = 'min-w-[280px] bg-white p-6 rounded-lg shadow flex-shrink-0';
+      card.innerHTML = `
+        <div class="flex justify-between items-center mb-2">
+          <h4 class="font-semibold">${r.name}</h4>
+          <div class="text-yellow-400">${'★'.repeat(r.rating)}</div>
+        </div>
+        <p class="text-gray-700 mb-4 text-sm">${r.text}</p>
+        <div class="text-xs text-gray-400">${new Date(r.date).toLocaleString()}</div>
+      `;
+      scroll.appendChild(card);
+    });
+  });
+</script>
+
   
 
 <section class="py-20 bg-gray-50" style="background-color: #f3f4f6;">
